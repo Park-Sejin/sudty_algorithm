@@ -11,10 +11,11 @@ class Main {
 			char lt_ch = Character.toUpperCase(str.charAt(lt));
 			char rt_ch = Character.toUpperCase(str.charAt(rt));
 			
-			if(!(lt_ch >= 'A' && lt_ch <= 'Z')) {
+			//!(lt_ch >= 'A' && lt_ch <= 'Z')
+			if(!Character.isAlphabetic(lt_ch)) {
 				lt++;
 			}
-			else if(!(rt_ch >= 'A' && rt_ch <= 'Z')) {
+			else if(!Character.isAlphabetic(rt_ch)) {
 				rt--;
 			}
 			else {
