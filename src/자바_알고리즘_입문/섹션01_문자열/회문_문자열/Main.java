@@ -5,6 +5,15 @@ import java.util.*;
 class Main {
 	public String solution(String str){
 		String answer = "YES";
+		
+		String cmpStr = new StringBuilder(str).reverse().toString();
+		
+		// 대소문자 무시
+		if(!str.equalsIgnoreCase(cmpStr)) {
+			answer = "NO";
+		}
+		
+		/*
 		int lt = 0, rt = str.length()-1;
 		
 		while(lt < rt) {
@@ -15,6 +24,7 @@ class Main {
 				return "NO";
 			}
 		}
+		*/
 		
 		return answer;
 	}
