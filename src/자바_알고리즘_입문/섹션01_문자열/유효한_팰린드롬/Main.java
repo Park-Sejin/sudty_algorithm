@@ -5,6 +5,15 @@ import java.util.*;
 class Main {
 	public String solution(String str){
 		String answer = "YES";
+		
+		str = str.replaceAll("[^a-zA-Z]","");
+		String cmpStr = new StringBuilder(str).reverse().toString();
+		
+		if(!str.equalsIgnoreCase(cmpStr)) {
+			answer = "NO";
+		}
+		
+		/*
 		int lt = 0, rt = str.length()-1;
 		
 		while(lt < rt) {
@@ -26,7 +35,7 @@ class Main {
 				rt--;
 			}
 		}
-		
+		*/
 		
 		return answer;
 	}
