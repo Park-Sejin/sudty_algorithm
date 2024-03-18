@@ -12,7 +12,7 @@ class Main {
 			num1 = num2;
 			num2 = (sum == 0)? 1 : sum;
 			
-			System.out.print(num2 + ((i < input1-1)? " " : ""));
+			System.out.print(num2 + " ");
 		}
 		
 	}
