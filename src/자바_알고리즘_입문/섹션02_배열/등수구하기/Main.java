@@ -10,16 +10,7 @@ class Main {
 			int rank = 1;
 			
 			for(int j = 0; j < arr.length; j++) {
-				if(i == j) {
-					continue;
-				}
-				
-				if(arr[i] == arr[j]) {
-					if(i > j) {
-						answer[i] = answer[j];
-					}
-				}
-				else if(arr[i] < arr[j]) {
+				if(arr[i] < arr[j]) {
 					rank++;
 				}
 			}
