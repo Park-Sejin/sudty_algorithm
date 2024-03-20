@@ -8,7 +8,6 @@ class Main {
 		
 		for(int i = 0; i < arr.length; i++) {
 			int rank = 1;
-			int sameCnt = 0;
 			
 			for(int j = 0; j < arr.length; j++) {
 				if(i == j) {
@@ -19,15 +18,12 @@ class Main {
 					if(i > j) {
 						answer[i] = answer[j];
 					}
-					
-					rank++;
-					sameCnt++;
 				}
 				else if(arr[i] < arr[j]) {
 					rank++;
 				}
 			}
-			answer[i] = rank-sameCnt;
+			answer[i] = rank;
 		}
 		
 		for(int n : answer) {
