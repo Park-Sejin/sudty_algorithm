@@ -13,13 +13,11 @@ class Main {
 			for(int j = 0; j < len; j++) {
 				sum1 += arr[i][j];
 				sum2 += arr[j][i];
-				
-				if(i == j) {
-					lSum += arr[i][j];
-				}
 			}
 			
+			lSum += arr[i][i];
 			rSum += arr[i][len-1-i];
+			
 			answer = Math.max(answer, Math.max(sum1, sum2));
 		}
 		
