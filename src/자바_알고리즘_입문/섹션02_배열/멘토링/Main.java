@@ -6,6 +6,34 @@ class Main {
 	public void solution(int n, int m, int[][] arr){
 		int answer = 0;
 		
+		for(int i = 1; i <= n; i++) {
+			for(int j = 1; j <= n; j++) {
+				int cnt = 0;
+				
+				for(int k = 0; k < m; k++) {
+					int pi = 0, pj = 0;
+					
+					for(int l = 0; l < n; l++) {
+						if(arr[k][l] == i) {
+							pi = l;
+						}
+						else if(arr[k][l] == j) {
+							pj = l;
+						}
+					}
+					
+					if(pi < pj) {
+						cnt++;
+					}
+				}
+				
+				if(cnt == m) {
+					answer++;
+				}
+			}
+		}
+		
+		/*
 		for(int i = 0; i < n; i++) {
 			int mto = arr[0][i];
 			
@@ -35,6 +63,7 @@ class Main {
 			}
 			
 		}
+		*/
 		
 		System.out.println(answer);
 	}
