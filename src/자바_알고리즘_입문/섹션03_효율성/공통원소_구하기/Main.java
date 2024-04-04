@@ -28,6 +28,20 @@ class Main {
 			}
 		}
 		
+		int j = 0, k = 0;
+		while(j < n1 && k < n2) {
+			if(arr1[j] == arr2[k]) {
+				answer.add(arr1[j]);
+				j++;
+				k++;
+			}
+			else if(arr1[j] > arr2[k]) {
+				k++;
+			}
+			else {
+				j++;
+			}
+		}
 		
 		for(int num : answer) {
 			System.out.print(num + " ");
