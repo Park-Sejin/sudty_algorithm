@@ -2,26 +2,19 @@ package 자바_알고리즘_입문.섹션03_효율성.연속_부분수열;
 
 import java.util.*;
 
-class Main {
+class Main2 {
 	public void solution(int n, int m, int[] arr){
 		int answer = 0;
-		int sum = 0, rt = 0;
+		int sum = 0, lt = 0;
 		
-		for(int lt = 0; lt < n; lt++) {
-			for(; rt < n; rt++) {
-				sum += arr[rt];
-				
-				if(sum == m) {
-					answer++;
-					rt++;
-					
-					sum -= arr[lt];
-					break;
-				}
-				else if(sum > m) {
-					sum -= (arr[lt]+arr[rt]);
-					break;
-				}
+		for(int rt = 0; rt < n; rt++) {
+			sum += arr[rt];
+			
+			if(sum == m) { answer++; }
+			
+			while(sum >= m) {
+				sum -= arr[lt++];
+				if(sum == m) { answer++; }
 			}
 		}
 		
@@ -29,7 +22,7 @@ class Main {
 	}
 	
 	public static void main(String[] args){
-		Main T = new Main();
+		Main2 T = new Main2();
 		Scanner in = new Scanner(System.in);
 		
 		int n = in.nextInt();
