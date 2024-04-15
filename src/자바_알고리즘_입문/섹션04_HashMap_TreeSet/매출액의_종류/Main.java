@@ -5,7 +5,7 @@ import java.util.*;
 class Main {
 	public void solution(int n, int m, int[] arr){
 		HashMap<Integer, Integer> map = new HashMap<>();
-		int[] answer = new int[m];
+		int[] answer = new int[n-m+1];
 		int lt = 0, rt = 0;
 		
 		while(rt < n) {
@@ -25,7 +25,7 @@ class Main {
 			}
 		}
 		
-		for(int i = 0; i < m; i++) {
+		for(int i = 0; i < answer.length; i++) {
 			System.out.print(answer[i] + " ");
 		}
 	}
