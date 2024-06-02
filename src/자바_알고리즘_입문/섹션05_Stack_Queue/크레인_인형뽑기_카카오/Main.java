@@ -17,12 +17,10 @@ class Main {
 			}
 		}
 		
-		for(int i = 0; i < n2; i++) {
-			int j = arr2[i]-1;
+		for(int j : arr2) { 
+			if(loc[j-1] == n){ continue; }
 			
-			if(loc[j] == n){ continue; }
-			
-			int num = arr[loc[j]][j];
+			int num = arr[loc[j-1]][j-1];
 			
 			if(!stack.isEmpty() && stack.peek() == num) {
 				stack.pop();
@@ -32,7 +30,7 @@ class Main {
 				stack.push(num);
 			}
 			
-			loc[j]++;
+			loc[j-1]++;
 		}
 		
 		System.out.print(answer);
