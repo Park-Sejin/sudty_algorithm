@@ -7,6 +7,7 @@ class Main {
 		Stack<Integer> stack = new Stack<>();
 		
 		for(char ch : str.toCharArray()) {
+			//Character.isDigit(ch)
 			if(ch >= '1' && ch <= '9') {
 				stack.push(Integer.parseInt(ch+""));
 			}
