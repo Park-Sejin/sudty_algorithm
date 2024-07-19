@@ -5,8 +5,7 @@ import java.util.*;
 class Main {
 	public void solution(int[] arr, int m){
 		Queue<Integer> que = new LinkedList<>();
-		int answer = 0;
-		int idx = m;
+		int answer = 0, idx = m;
 		
 		for(int num : arr) {
 			que.offer(num);
@@ -20,10 +19,7 @@ class Main {
 					que.poll();
 					answer++;
 					
-					if(idx == 0) {
-						break;
-					}
-					
+					if(idx == 0) { break; }
 					idx--;
 				}
 				else {
